@@ -30,20 +30,20 @@ train1, test1 = normalize(training_data_1, training_data_2)
 train2, test2 = normalize(training_data_2, training_data_3)
 train3, test3 = normalize(training_data_1, training_data_3)
 
-linear_regression_model = LinearRegression()
-linear_regression_model.fit(train1, prices_1)
-pred1 = linear_regression_model.predict(test1)
+ridge_regression_model = Ridge()
+ridge_regression_model.fit(train1, prices_1)
+pred1 = ridge_regression_model.predict(test1)
 mse_value1 = mean_squared_error(prices_1, pred1)
 mae_value1 = mean_absolute_error(prices_1, pred1)
 
 
-linear_regression_model.fit(train2, prices_2)
-pred2 = linear_regression_model.predict(test2)
+ridge_regression_model.fit(train2, prices_2)
+pred2 = ridge_regression_model.predict(test2)
 mse_value2 = mean_squared_error(prices_2, pred2)
 mae_value2 = mean_absolute_error(prices_2, pred2)
 
-linear_regression_model.fit(train3, prices_3)
-pred3 = linear_regression_model.predict(test3)
+ridge_regression_model.fit(train3, prices_3)
+pred3 = ridge_regression_model.predict(test3)
 mse_value3 = mean_squared_error(prices_3, pred3)
 mae_value3 = mean_absolute_error(prices_3, pred3)
 
